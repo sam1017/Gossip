@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@color/white"> 
+
+	<TextView
+        android:id="@+id/text_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="10px"
+        android:textSize="14dip"
+		android:textStyle="bold"
+        android:text="Aktuelles Problem:"/>
+	<TextView
+        android:id="@+id/text_target"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Zielfunktion:"
+        android:layout_marginLeft="2dip"
+        android:layout_below="@id/text_label" />
+
+    <LinearLayout
+    	android:id="@+id/viewgroup_target" 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_below="@id/text_target">
+  	<ListView 
+  		android:id="@+id/list_target" 
+  		android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dip"
+        android:fadingEdge="none"
+        android:fadeScrollbars="true"
+	 	android:scrollbarFadeDuration="100"/>
+    <TextView 
+    	android:id="@+id/text_target_empty"
+    	android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:text="Keine Zielfunktion eingegeben. Bitte neue Zielfunktion anlegen!"
+        android:layout_marginLeft="5dip" />
+ 	</LinearLayout>
+        
+	<TextView
+        android:id="@+id/text_constraint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Nebenbedingungen:"
+        android:layout_marginLeft="2dip"
+        android:layout_below="@id/viewgroup_target" />
+
+    <LinearLayout
+    	android:id="@+id/viewgroup_constraint" 
+    	android:layout_width="fill_parent"
+    	android:layout_height="140dip"
+    	android:orientation="vertical"
+    	android:layout_below="@id/text_constraint">
+  	<ListView 
+  		android:id="@+id/list_constraint" 
+  		android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+		android:scrollbarFadeDuration="100"
+		android:fadingEdge="none"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dip" />
+    <TextView 
+    	android:id="@+id/text_constraint_empty"
+    	android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:text="Keine Nebenbedingungen eingegeben. Bitte neue Nebenbedingung anlegen!"
+        android:layout_marginLeft="5dip" />
+    </LinearLayout>    
+    <LinearLayout
+    	android:id="@+id/btngroup_navigation" 
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:background="@color/white"
+    	android:orientation="horizontal"
+    	android:layout_alignParentBottom="true"
+    	android:layout_alignParentRight="true">
+	    <Button 
+	        android:id="@+id/btn_cancel" 
+	        android:layout_height="48dip"
+			android:layout_width="wrap_content"
+	        android:text="Zurück"
+		    android:layout_gravity="center_vertical|center_horizontal|center"
+	        android:gravity="bottom"/> 
+	    <Button 
+	        android:id="@+id/btn_new_constraint" 
+	        android:layout_height="48dip"
+			android:layout_width="wrap_content"
+			android:textSize="12dip"
+	        android:text="Nebenbedingung &#10;hinzufügen"
+	        android:layout_gravity="center_vertical|center_horizontal|center"
+	        android:gravity="bottom"/> 
+	    <Button 
+	        android:id="@+id/btn_settings"
+	        android:background="@drawable/btn_settings"
+	        android:layout_height="50dip"
+			android:layout_width="51dip"
+			android:layout_alignParentTop="true"
+	        android:layout_gravity="center_vertical|center_horizontal|center"
+	        android:gravity="bottom"/> 
+	    <Button 
+	        android:id="@+id/btn_save" 
+	        android:background="@drawable/btn_save"
+	        android:layout_height="50dip"
+			android:layout_width="51dip"
+			android:layout_alignParentTop="true"
+	        android:layout_gravity="center_vertical|center_horizontal|center"
+	        android:gravity="bottom"/> 
+	    <Button 
+	        android:id="@+id/btn_start" 
+	        android:layout_height="48dip"
+			android:layout_width="wrap_content"
+	        android:text="Start"
+	        android:layout_gravity="center_vertical|center_horizontal|center"
+	        android:gravity="bottom"/> 
+	</LinearLayout>
+	<ImageView 
+		android:id="@+id/imageview_logo"
+		android:src="@drawable/simplex4android_logo"
+		android:layout_width="90dip"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:adjustViewBounds="true"
+		android:scaleType="fitXY"/>
+</RelativeLayout>

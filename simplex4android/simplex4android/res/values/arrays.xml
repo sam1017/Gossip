@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="spinner_gtltoreq_values">
+		<item>&#x2264;</item>
+		<item>&#x2265;</item>
+		<item>=</item>
+	</string-array>
+	<string-array name="spinner_minmax_values">
+		<item>min!</item>
+		<item>max!</item>
+	</string-array>
+</resources>

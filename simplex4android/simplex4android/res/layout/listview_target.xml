@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:background="@color/white">
+	<HorizontalScrollView
+		android:layout_width="410dip"
+		android:layout_height="fill_parent"
+		android:fadeScrollbars="true"
+	 	android:scrollbarFadeDuration="100"
+	 	android:fadingEdge="horizontal"
+	 	android:fadingEdgeLength="10dip">
+	 <TextView 
+	 	android:id="@+id/tv_row"
+	 	android:text="Zeile"
+	 	android:textSize="20dip"
+	 	android:padding="10dip"
+	 	android:textColor="@color/black"
+	 	android:layout_width="fill_parent"
+	 	android:layout_height="fill_parent"/>
+	</HorizontalScrollView>
+	<Button 
+ 	    android:id="@+id/btn_edit"
+ 	    android:background="@drawable/btn_edit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="44dip"
+	    android:layout_alignParentRight="true"
+	    android:onClick="TargetEditClickHandler"/>
+</RelativeLayout>
